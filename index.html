@@ -10,133 +10,101 @@
 
 <style>
 :root{
-  --azul:#2b4cff;
-  --roxo:#6a5cff;
-  --verde:#2bb673;
-  --bg:#f4f7ff;
-  --texto:#3a3a3a;
+--azul:#2b4cff;
+--roxo:#6a5cff;
+--verde:#2bb673;
+--fundo:#f4f7ff;
 }
 
 *{box-sizing:border-box}
 body{
-  margin:0;
-  font-family:'Poppins',sans-serif;
-  background:var(--bg);
-  color:var(--texto);
-  scroll-behavior:smooth;
+margin:0;
+font-family:Poppins,sans-serif;
+background:var(--fundo);
+color:#333;
+scroll-behavior:smooth;
 }
 
 header{
-  background:linear-gradient(135deg,var(--azul),var(--roxo));
-  color:#fff;
-  padding:120px 20px 150px;
-  text-align:center;
+background:linear-gradient(135deg,var(--azul),var(--roxo));
+color:#fff;
+padding:120px 20px;
+text-align:center;
 }
 
-header h1{font-size:3rem;margin-bottom:20px}
-header p{max-width:820px;margin:auto;font-size:1.2rem}
+header h1{font-size:2.8rem}
+header p{max-width:800px;margin:20px auto;font-size:1.2rem}
 
 .btn{
-  margin-top:40px;
-  display:inline-block;
-  padding:18px 44px;
-  border-radius:50px;
-  background:linear-gradient(135deg,#ffd200,#ffea7a);
-  color:#1f1f1f;
-  font-weight:700;
-  text-decoration:none;
-  box-shadow:0 12px 30px rgba(0,0,0,.25);
+background:linear-gradient(135deg,#ffd200,#ffea7a);
+padding:18px 40px;
+border-radius:50px;
+font-weight:700;
+color:#111;
+text-decoration:none;
+display:inline-block;
+margin-top:30px;
 }
 
 section{
-  max-width:1250px;
-  margin:auto;
-  padding:90px 20px;
+max-width:1200px;
+margin:auto;
+padding:90px 20px;
 }
 
-h2{
-  text-align:center;
-  font-size:2.4rem;
-  color:var(--azul);
-  margin-bottom:60px;
-}
+h2{text-align:center;color:var(--azul);font-size:2.3rem;margin-bottom:50px}
 
 .grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:35px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
 }
 
 .card{
-  background:#fff;
-  padding:40px;
-  border-radius:26px;
-  box-shadow:0 18px 45px rgba(0,0,0,.12);
+background:#fff;
+padding:35px;
+border-radius:24px;
+box-shadow:0 15px 40px rgba(0,0,0,.12);
+transition:.3s;
 }
 
-.card h3{color:var(--azul)}
+.card:hover{transform:translateY(-8px)}
 
 .form-wrapper{
-  background:linear-gradient(180deg,#fff,#eef2ff);
-  max-width:620px;
-  margin:auto;
-  padding:55px;
-  border-radius:35px;
-  box-shadow:0 25px 60px rgba(0,0,0,.18);
+background:#fff;
+border-radius:30px;
+box-shadow:0 20px 50px rgba(0,0,0,.18);
+padding:20px;
+max-width:700px;
+margin:auto;
 }
 
-.input-group{margin-bottom:22px}
-.input-group label{font-weight:600}
-.input-group input,
-.input-group select{
-  width:100%;
-  padding:16px;
-  border-radius:14px;
-  border:1px solid #ccd3ff;
-  margin-top:8px;
-  font-family:'Poppins',sans-serif;
-}
-
-button{
-  width:100%;
-  margin-top:25px;
-  padding:18px;
-  border:none;
-  border-radius:50px;
-  background:linear-gradient(135deg,var(--azul),var(--roxo));
-  color:#fff;
-  font-size:1.05rem;
-  font-weight:700;
-  cursor:pointer;
-}
-
-.lgpd{
-  margin-top:20px;
-  font-size:.85rem;
-  color:#555;
-  text-align:center;
-}
-
-.cta-fixo{
-  position:fixed;
-  bottom:22px;
-  right:22px;
-  background:linear-gradient(135deg,#25d366,#1ebe5b);
-  color:#fff;
-  padding:16px 26px;
-  border-radius:60px;
-  font-weight:700;
-  text-decoration:none;
-  box-shadow:0 10px 30px rgba(0,0,0,.35);
+iframe{
+width:100%;
+height:900px;
+border:none;
+border-radius:20px;
 }
 
 footer{
-  background:#0f1229;
-  color:#e6e8ff;
-  text-align:center;
-  padding:70px 25px;
+background:#0f1229;
+color:#e6e8ff;
+padding:60px 20px;
+text-align:center;
 }
-footer p{max-width:900px;margin:10px auto;font-size:.9rem}
+
+.cta-fixo{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25d366;
+color:#fff;
+padding:16px 24px;
+border-radius:50px;
+font-weight:700;
+text-decoration:none;
+z-index:999;
+}
 </style>
 </head>
 
@@ -144,31 +112,30 @@ footer p{max-width:900px;margin:10px auto;font-size:.9rem}
 
 <header data-aos="fade-down">
 <h1>Quem cuida de quem educa?</h1>
-<p>O <strong>Plano SerClin Educador</strong> é um cuidado contínuo em saúde mental, criado para quem sustenta rotinas intensas e precisa de equilíbrio real.</p>
+<p>O Plano SerClin Educador foi criado para quem cuida de pessoas e também precisa cuidar da própria saúde emocional.</p>
 <a href="#formulario" class="btn">Quero cuidar de mim</a>
 </header>
 
 <section data-aos="fade-up">
 <h2>O que você terá acesso</h2>
 <div class="grid">
-<div class="card"><h3>Psicoterapia</h3><p>Cuidado contínuo para ansiedade, estresse e saúde emocional.</p></div>
-<div class="card"><h3>Psicopedagogia</h3><p>Organização cognitiva, foco e desempenho pessoal.</p></div>
-<div class="card"><h3>Avaliação Neuropsicológica</h3><p>Acesso facilitado quando houver indicação clínica.</p></div>
-<div class="card"><h3>Atendimento Humanizado</h3><p>Escuta qualificada, ética e respeito à sua história.</p></div>
-<div class="card"><h3>Vantagens do Plano</h3><p>Previsibilidade, valores acessíveis e prioridade de agenda.</p></div>
+<div class="card"><h3>Psicoterapia</h3><p>Acompanhamento contínuo para saúde emocional.</p></div>
+<div class="card"><h3>Psicopedagogia</h3><p>Organização cognitiva, foco e desempenho.</p></div>
+<div class="card"><h3>Avaliação Neuropsicológica</h3><p>Valores diferenciados quando indicado.</p></div>
+<div class="card"><h3>Cuidado Humanizado</h3><p>Atendimento ético e centrado na sua realidade.</p></div>
 </div>
 
 <div style="text-align:center;margin-top:60px">
-<a href="#formulario" class="btn">Quero iniciar meu cuidado</a>
+<a href="#formulario" class="btn">Quero cuidar de mim</a>
 </div>
 </section>
 
 <section data-aos="fade-up">
 <h2>Como funciona na prática</h2>
 <div class="grid">
-<div class="card"><h3>1. Solicite</h3><p>Preencha o formulário com seus dados.</p></div>
-<div class="card"><h3>2. Orientação</h3><p>Nossa equipe entra em contato com você.</p></div>
-<div class="card"><h3>3. Início</h3><p>Você agenda e inicia seu acompanhamento.</p></div>
+<div class="card"><h3>1. Inscrição</h3><p>Preencha o formulário com seus dados.</p></div>
+<div class="card"><h3>2. Contato</h3><p>Nossa equipe entra em contato com você.</p></div>
+<div class="card"><h3>3. Início</h3><p>Você começa seu cuidado com previsibilidade.</p></div>
 </div>
 </section>
 
@@ -176,61 +143,25 @@ footer p{max-width:900px;margin:10px auto;font-size:.9rem}
 <h2>Solicite sua adesão</h2>
 
 <div class="form-wrapper">
-<form id="leadForm">
-
-<div class="input-group">
-<label>Nome completo</label>
-<input name="nome" required>
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe5d1fae4RZJNUP7l5lqgmokmlt0BPDvkE66WvJd4iF-XxM4A/viewform?embedded=true"></iframe>
 </div>
 
-<div class="input-group">
-<label>Telefone / WhatsApp</label>
-<input name="telefone" required>
-</div>
-
-<div class="input-group">
-<label>Categoria profissional</label>
-<select name="categoria" required>
-<option value="">Selecione</option>
-<option>Educação</option>
-<option>Saúde</option>
-<option>Outro sindicato</option>
-</select>
-</div>
-
-<button type="submit">Quero iniciar meu cuidado</button>
-
-<p class="lgpd">
-Ao enviar, você autoriza o uso dos dados para contato conforme a LGPD.
+<p style="text-align:center;margin-top:20px;font-size:.9rem">
+Ao enviar, você concorda com nossa Política de Privacidade e LGPD.
 </p>
-
-</form>
-</div>
 </section>
 
 <footer>
 <p><strong>Instituto SerClin</strong></p>
-<p>Os dados coletados são usados exclusivamente para contato e orientação.</p>
-<p>© Instituto SerClin – Todos os direitos reservados</p>
+<p>Cuidado em saúde mental com ética, segurança e responsabilidade.</p>
+<p>© Todos os direitos reservados</p>
 </footer>
 
 <a class="cta-fixo" href="https://wa.me/5568992161717" target="_blank">WhatsApp</a>
 
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-<script>AOS.init({duration:1000,once:true});</script>
-
 <script>
-document.getElementById("leadForm").addEventListener("submit",function(e){
-e.preventDefault();
-const formData=new FormData(this);
-
-fetch("https://script.google.com/macros/s/AKfycbw9i-y_ORfzUOlQ8U5FzU5LnmL1wgwpX5N3cJuSMepsDu40SKKYrFcW7G-yH0oi7l2t/exec",{
-method:"POST",
-body:formData
-})
-.then(()=>window.location.href="https://wa.me/5568992161717?text=Olá!%20Acabei%20de%20me%20inscrever%20no%20Plano%20SerClin%20Educador.")
-.catch(()=>alert("Erro ao enviar. Tente novamente."));
-});
+AOS.init({duration:1000,once:true});
 </script>
 
 </body>
