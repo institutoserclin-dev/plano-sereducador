@@ -163,6 +163,21 @@ Ao enviar, você concorda com nossa Política de Privacidade e LGPD.
 <script>
 AOS.init({duration:1000,once:true});
 </script>
+<script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+<script>
+gsap.from("header h1", {y:60, opacity:0, duration:1});
+gsap.from("header p", {y:40, opacity:0, delay:0.3, duration:1});
+gsap.from(".btn", {scale:0.8, opacity:0, delay:0.6, duration:0.6});
+
+gsap.utils.toArray(".card").forEach(card => {
+  gsap.from(card, {
+    scrollTrigger: card,
+    y:50,
+    opacity:0,
+    duration:.8
+  });
+});
+</script>
 
 </body>
 </html>
