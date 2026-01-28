@@ -1,163 +1,211 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Plano SerClin Educador | Instituto SerClin</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plano SerClin Educador | Instituto SerClin</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-<style>
-:root{
-  --azul:#2b4cff;
-  --roxo:#6a5cff;
-  --verde:#2bb673;
-  --fundo:#f4f7ff;
-  --texto:#333;
-  --cta:#ffd200;
-}
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
-*{box-sizing:border-box;}
-html{scroll-behavior:smooth;}
-body{
-  margin:0;
-  font-family:'Poppins',sans-serif;
-  background:var(--fundo);
-  color:var(--texto);
-}
+  <style>
+    :root {
+      --azul: #2b4cff;
+      --roxo: #6a5cff;
+      --verde: #2bb673;
+      --fundo: #f4f7ff;
+      --texto: #3a3a3a;
+      --cta: #ffd200;
+    }
 
-header{
-  background:linear-gradient(135deg,var(--azul),var(--roxo));
-  color:#fff;
-  padding:110px 20px 140px;
-  text-align:center;
-}
+    * { box-sizing: border-box; }
 
-header h1{font-size:2.8rem;margin-bottom:20px;}
-header p{max-width:800px;margin:auto;font-size:1.15rem;line-height:1.6;}
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: var(--fundo);
+      color: var(--texto);
+      scroll-behavior: smooth;
+    }
 
-.btn{
-  display:inline-block;
-  margin-top:35px;
-  padding:18px 44px;
-  background:linear-gradient(135deg,var(--cta),#ffea7a);
-  color:#111;
-  border-radius:50px;
-  font-weight:700;
-  text-decoration:none;
-  transition:.3s;
-  box-shadow:0 12px 30px rgba(0,0,0,.25);
-}
-.btn:hover{transform:translateY(-4px);}
+    header {
+      background: linear-gradient(135deg, var(--azul), var(--roxo));
+      color: #fff;
+      padding: 120px 20px 150px;
+      text-align: center;
+    }
 
-section{
-  max-width:1250px;
-  margin:auto;
-  padding:90px 20px;
-}
+    header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 20px;
+    }
 
-h2{
-  text-align:center;
-  font-size:2.2rem;
-  margin-bottom:50px;
-  color:var(--azul);
-}
+    header p {
+      font-size: 1.2rem;
+      max-width: 800px;
+      margin: auto;
+    }
 
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:35px;
-}
+    .btn {
+      display: inline-block;
+      margin-top: 40px;
+      background: linear-gradient(135deg, var(--cta), #ffea7a);
+      color: #1f1f1f;
+      padding: 18px 45px;
+      border-radius: 50px;
+      font-weight: 700;
+      text-decoration: none;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+      transition: .3s;
+    }
 
-.card{
-  background:#fff;
-  padding:40px;
-  border-radius:26px;
-  box-shadow:0 18px 45px rgba(0,0,0,.12);
-  transition:.3s;
-}
-.card:hover{transform:translateY(-8px);}
-.card h3{color:var(--azul);margin-bottom:10px;}
+    .btn:hover {
+      transform: translateY(-4px);
+    }
 
-.cta-mid{
-  text-align:center;
-  margin-top:70px;
-}
+    section {
+      padding: 90px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
 
-#formulario{
-  scroll-margin-top:80px;
-}
+    h2 {
+      text-align: center;
+      color: var(--azul);
+      font-size: 2.3rem;
+      margin-bottom: 60px;
+    }
 
-.form-box{
-  max-width:780px;
-  margin:auto;
-  background:#fff;
-  padding:30px;
-  border-radius:30px;
-  box-shadow:0 20px 50px rgba(0,0,0,.15);
-}
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+      gap: 35px;
+    }
 
-.lgpd{
-  text-align:center;
-  font-size:.9rem;
-  color:#555;
-  margin-top:25px;
-}
+    .card {
+      background: #fff;
+      padding: 40px;
+      border-radius: 26px;
+      box-shadow: 0 18px 45px rgba(0,0,0,0.12);
+      transition: .4s;
+      position: relative;
+    }
 
-footer{
-  background:#0f1229;
-  color:#e6e8ff;
-  text-align:center;
-  padding:60px 20px;
-}
+    .card::before {
+      content:'';
+      position:absolute;
+      top:0; left:0;
+      width:100%; height:6px;
+      background: linear-gradient(90deg, var(--azul), var(--verde));
+      border-radius:26px 26px 0 0;
+    }
 
-.cta-fixo{
-  position:fixed;
-  bottom:22px;
-  right:22px;
-  background:linear-gradient(135deg,#25d366,#1ebe5b);
-  color:#fff;
-  padding:17px 26px;
-  border-radius:60px;
-  font-weight:700;
-  text-decoration:none;
-  box-shadow:0 10px 30px rgba(0,0,0,.35);
-  z-index:1000;
-}
-</style>
+    .card:hover {
+      transform: translateY(-8px);
+    }
+
+    .card h3 {
+      color: var(--azul);
+      margin-bottom: 12px;
+    }
+
+    .cta-middle {
+      text-align: center;
+      margin-top: 60px;
+    }
+
+    /* FORM */
+    .form-box {
+      max-width: 620px;
+      margin: auto;
+      background: linear-gradient(180deg,#fff,#f6f8ff);
+      padding: 45px;
+      border-radius: 32px;
+      box-shadow: 0 25px 60px rgba(0,0,0,.18);
+    }
+
+    .input-group {
+      margin-bottom: 25px;
+    }
+
+    .input-group label {
+      font-weight: 600;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .input-group input,
+    .input-group select {
+      width: 100%;
+      padding: 16px;
+      border-radius: 14px;
+      border: 1px solid #d6ddff;
+      font-size: 1rem;
+    }
+
+    .lgpd {
+      text-align: center;
+      font-size: .9rem;
+      color: #555;
+      margin-top: 25px;
+    }
+
+    footer {
+      background: #0f1229;
+      color: #e6e8ff;
+      text-align: center;
+      padding: 60px 25px;
+      font-size: .9rem;
+    }
+
+    .cta-fixo {
+      position: fixed;
+      bottom: 22px;
+      right: 22px;
+      background: linear-gradient(135deg,#25d366,#1ebe5b);
+      color: #fff;
+      padding: 17px 26px;
+      border-radius: 60px;
+      text-decoration: none;
+      font-weight: 700;
+      box-shadow: 0 10px 30px rgba(0,0,0,.35);
+      z-index: 999;
+    }
+  </style>
 </head>
 
 <body>
 
 <header data-aos="fade-down">
   <h1>Quem cuida de quem educa?</h1>
-  <p>O <strong>Plano SerClin Educador</strong> foi criado para quem precisa de equilíbrio emocional, saúde mental e cuidado contínuo, com acesso organizado e previsível.</p>
+  <p>O Plano SerClin Educador oferece cuidado emocional, organização e previsibilidade para quem dedica sua vida a educar.</p>
   <a href="#formulario" class="btn">Quero cuidar de mim agora</a>
 </header>
 
 <section data-aos="fade-up">
   <h2>O que você terá acesso</h2>
   <div class="grid">
-    <div class="card"><h3>Psicoterapia Contínua</h3><p>Cuidado emocional estruturado, com acompanhamento profissional.</p></div>
-    <div class="card"><h3>Psicopedagogia</h3><p>Suporte para foco, organização cognitiva e desempenho.</p></div>
-    <div class="card"><h3>Avaliação Neuropsicológica</h3><p>Acesso facilitado quando houver indicação clínica.</p></div>
-    <div class="card"><h3>Atendimento Humanizado</h3><p>Escuta ética, qualificada e centrada em você.</p></div>
-    <div class="card"><h3>Vantagens do Plano</h3><p>Previsibilidade, prioridade de agenda e organização por ciclos.</p></div>
+    <div class="card"><h3>Psicoterapia</h3><p>Acompanhamento contínuo e humanizado.</p></div>
+    <div class="card"><h3>Psicopedagogia</h3><p>Organização cognitiva e desempenho.</p></div>
+    <div class="card"><h3>Avaliação Neuropsicológica</h3><p>Condições especiais quando indicado.</p></div>
+    <div class="card"><h3>Previsibilidade</h3><p>Sem sustos financeiros ou interrupções.</p></div>
+    <div class="card"><h3>Instituto SerClin</h3><p>Estrutura ética e profissional.</p></div>
   </div>
 
-  <!-- CTA NO MEIO DA PÁGINA -->
-  <div class="cta-mid">
-    <a href="#formulario" class="btn">Quero iniciar meu cuidado</a>
+  <div class="cta-middle">
+    <a href="#formulario" class="btn">Quero começar agora</a>
   </div>
 </section>
 
 <section data-aos="fade-up">
-  <h2>Como funciona na prática</h2>
+  <h2>Como funciona</h2>
   <div class="grid">
-    <div class="card"><h3>1. Preencha o formulário</h3><p>Leva menos de 1 minuto.</p></div>
-    <div class="card"><h3>2. Receba o contato</h3><p>Nossa equipe orienta sobre valores e adesão.</p></div>
-    <div class="card"><h3>3. Comece seu cuidado</h3><p>Agende e inicie seu acompanhamento.</p></div>
+    <div class="card"><h3>1. Cadastro</h3><p>Você demonstra interesse.</p></div>
+    <div class="card"><h3>2. Contato</h3><p>Nossa equipe orienta você.</p></div>
+    <div class="card"><h3>3. Início</h3><p>Você começa seu cuidado.</p></div>
   </div>
 </section>
 
@@ -165,28 +213,68 @@ footer{
   <h2>Solicite sua adesão</h2>
 
   <div class="form-box">
-    <iframe 
-      src="https://docs.google.com/forms/d/e/1FAIpQLSe5d1fae4RZJNUP7l5lqgmokmlt0BPDvkE66WvJd4iF-XxM4A/viewform?embedded=true"
-      width="100%" height="980" frameborder="0" style="border:none;">
-      Carregando…
-    </iframe>
+    <form id="leadForm">
+
+      <div class="input-group">
+        <label>Nome completo</label>
+        <input type="text" name="nome" required>
+      </div>
+
+      <div class="input-group">
+        <label>Telefone / WhatsApp</label>
+        <input type="tel" name="telefone" required>
+      </div>
+
+      <div class="input-group">
+        <label>Categoria profissional</label>
+        <select name="categoria" required>
+          <option value="">Selecione</option>
+          <option>Educação</option>
+          <option>Saúde</option>
+          <option>Outro sindicato</option>
+        </select>
+      </div>
+
+      <button type="submit" class="btn" style="width:100%;">Quero iniciar meu cuidado</button>
+    </form>
   </div>
 
   <p class="lgpd">
-    Ao enviar o formulário, você autoriza o tratamento dos seus dados pelo Instituto SerClin, conforme a LGPD.
+    Seus dados são tratados conforme a LGPD (Lei nº 13.709/2018).
   </p>
 </section>
 
 <footer>
-  <p><strong>Instituto SerClin</strong></p>
-  <p>Proteção de dados, ética profissional e confidencialidade.</p>
+  © Instituto SerClin — Todos os direitos reservados
 </footer>
 
-<a class="cta-fixo" href="https://wa.me/5568992161717" target="_blank">Falar no WhatsApp</a>
+<a class="cta-fixo" href="https://wa.me/5568992161717" target="_blank">WhatsApp</a>
 
+<!-- AOS -->
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>AOS.init({duration:1000, once:true});</script>
+
+<!-- FORM + API -->
 <script>
-AOS.init({duration:1000,once:true});
+document.getElementById("leadForm").addEventListener("submit", function(e){
+  e.preventDefault();
+
+  const data = {
+    nome: this.nome.value,
+    telefone: this.telefone.value,
+    categoria: this.categoria.value
+  };
+
+  fetch("https://script.google.com/macros/s/AKfycbw9i-y_ORfzUOlQ8U5FzU5LnmL1wgwpX5N3cJuSMepsDu40SKKYrFcW7G-yH0oi7l2t/exec", {
+    method: "POST",
+    headers: {"Content-Type":"application/json"},
+    body: JSON.stringify(data)
+  })
+  .then(() => {
+    window.location.href = "https://wa.me/5568992161717?text=Olá!%20Acabei%20de%20me%20inscrever%20no%20Plano%20SerClin%20Educador.";
+  })
+  .catch(()=> alert("Erro ao enviar. Tente novamente."));
+});
 </script>
 
 </body>
